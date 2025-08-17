@@ -37,7 +37,7 @@ def show_image(image_data, title="Відновлене зображення", mo
     
     plt.imshow(display_image, cmap=cmap)
     plt.title(title)
-    plt.axis('off') # Вимкнути осі
+    plt.axis('off') 
     plt.show()
 
 def get_image_shape(image_data):
@@ -52,7 +52,7 @@ def perform_svd(channel_data):
     if channel_data.ndim != 2:
         raise ValueError("perform_svd очікує 2D масив для каналу.")
     
-    # Переконайтеся, що дані є float для SVD
+    # дані є float для SVD
     if channel_data.dtype not in [np.float32, np.float64]:
          channel_data = channel_data.astype(np.float32)
 
